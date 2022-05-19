@@ -1,4 +1,3 @@
-
 body {
   font-family: "Montserrat";
   text-align: center;
@@ -28,7 +27,7 @@ p {
 /* Containers */
 
 .container-fluid{
-  padding: 7% 15%;
+  padding: 2% 15% 7% 15%;
 }
 
 /* Sections */
@@ -96,6 +95,15 @@ p {
   position: relative;
 }
 
+.feature-images{
+  margin-bottom: 1rem;
+  width: 70%;
+  border-radius: 10%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #ff4c68;
+}
+
 .feature-title {
   font-size: 1.5rem;
 }
@@ -111,6 +119,10 @@ p {
 
 .icon:hover {
   color: #ff4c68;
+}
+
+#sec{
+  position: relative;
 }
 
 /* Testimonial Section */
@@ -130,6 +142,12 @@ p {
   margin: 20px;
 }
 
+
+#ponude{
+  color: #ff4c68;
+  padding-top: 4%;
+  font-size: 3.5rem;
+}
 
 #press {
   background-color: #ef8172;
