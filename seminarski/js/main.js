@@ -33,3 +33,25 @@ const processData = data => {
       section.appendChild(mainDiv);
     });
 }
+
+//Post
+let forma = document.getElementById('forma');
+forma.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    let name = document.getElementById('name');
+    let price = document.getElementById('price');
+    
+    fetch('https://reqres.in/api/users', {
+        method: 'POST',
+        headers:{
+            "Content-type":"application/json"
+        },
+        body: JSON.stringify({
+            "name": name.value,
+            "price": price.value,
+        })
+    })
+        .then(res => res.json())
+        .then(data => console.log(data))
+})
