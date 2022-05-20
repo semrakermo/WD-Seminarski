@@ -19,6 +19,11 @@ p {
   line-height: 1.5;
 }
 
+.delete-div{
+  color:#ff4c68;
+  padding: 5% 0;
+}
+
 .section-heading {
   font-size: 3rem;
   line-height: 1.5;
@@ -188,6 +193,15 @@ p {
 .pricing-column {
   padding: 3% 2%;
 }
+
+.delete-text{
+  font-size: 3.5rem;
+}
+
+#dropdownMenuLink{
+  margin: auto;
+}
+
 
 /* CTA Section */
 
