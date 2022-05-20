@@ -44,7 +44,7 @@
               <a class="nav-link" href="#footer">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#ponude">Ponude</a>
+              <a class="nav-link" href="#offers">Offers</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#pricing">Pricing</a>
@@ -80,7 +80,7 @@
   <!-- Features -->
 
   <section class="white-section" id="sec">
-    <h2 id="ponude">Ponude</h2>
+    <h2 id="offers">Our offers</h2>
     <div class="container-fluid" id="parent">
       <div class="row" id="row">
 
@@ -190,11 +190,13 @@
   </section>
 
   <section>
-    <div>
-      <form action="https://ptf-web-dizajn-2022.azurewebsites.net/api/Food" id="forma">
-        <input type="text" placeholder="Name" id="name">
-        <input type="number" placeholder="Price" id="price">
-        <input type="submit" placeholder="Submit">
+    <div class="first-form">
+      <h2 class="form-heading">Do you want to submit more food?</h2>
+      <form action="https://ptf-web-dizajn-2022.azurewebsites.net/api/Food" id="forma"> 
+        <input type="text" placeholder="Name" id="name" class="col-6 forma"> <br>
+        <input type="number" placeholder="Price" id="price" class="col-6 forma"> <br>
+        <input type="text" placeholder="Image" id="imageUrl" class="col-6 forma"> <br>
+        <input type="submit" placeholder="Submit" class="btn btn-lg btn-light">
       </form>
     </div>
   </section>

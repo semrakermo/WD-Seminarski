@@ -37,6 +37,21 @@ p {
   color: #fff;
 }
 
+.forma{
+  margin: 7px auto;
+  line-height: 2;
+}
+
+.first-form{
+  padding: 5% 0;
+  background-color: #ef8172;
+}
+
+.form-heading{
+  color: white;
+  margin-bottom: 2%;
+}
+
 .white-section {
   background-color: #fff;
 }
@@ -143,7 +158,7 @@ p {
 }
 
 
-#ponude{
+#offers{
   color: #ff4c68;
   padding-top: 4%;
   font-size: 3.5rem;

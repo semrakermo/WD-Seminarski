@@ -41,6 +41,7 @@ forma.addEventListener('submit', function(e){
 
     let name = document.getElementById('name');
     let price = document.getElementById('price');
+    let imageUrl = document.getElementById('imageUrl');
     
     fetch('https://reqres.in/api/users', {
         method: 'POST',
@@ -50,6 +51,7 @@ forma.addEventListener('submit', function(e){
         body: JSON.stringify({
             "name": name.value,
             "price": price.value,
+            "imageUrl": imageUrl.value,
         })
     })
         .then(res => res.json())
