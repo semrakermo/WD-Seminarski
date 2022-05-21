@@ -5,6 +5,8 @@ fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Food')
 
 const processData = data => {
     
+
+
     const section = document.getElementById('sec');
     const mainDiv = document.getElementById('parent');
     const row = document.getElementById('row');
@@ -32,8 +34,12 @@ const processData = data => {
         button.classList.add('btn', 'btn-primary');
         button.setAttribute("data-toggle", "modal");
         button.setAttribute("data-target", "#exampleModal");
-        button.setAttribute("data-whatever", element.name);
+        button.setAttribute("data-id", element.id);
+        button.setAttribute("data-name", element.name);
+        button.setAttribute("data-image", element.imageUrl);
+        button.setAttribute("data-price", element.price);
         button.innerHTML = "Edit";
+
 
         div.appendChild(img);
         div.appendChild(h3);
@@ -55,13 +61,20 @@ const processData = data => {
 
 $('#exampleModal').on('show.bs.modal', function (event) {
   var button = $(event.relatedTarget) // Button that triggered the modal
-  var recipient = button.data('whatever') // Extract info from data-* attributes
+  var putId = button.data('id') // Extract info from data-* attributes
+  var putName = button.data('name')
+  var putImg = button.data('image')
+  var putPrice = button.data('price')
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   var modal = $(this)
-  modal.find('.modal-title').text('New message to ' + recipient)
-  modal.find('.modal-body input').val(recipient)
+  modal.find('.modal-title').text('New message to ' + putId)
+  modal.find('.modal-body #foodID').val(putId)
+  modal.find('.modal-body #recipient-name').val(putName)
+  modal.find('.modal-body #foodImg').val(putImg)
+  modal.find('.modal-body #price-text').val(putPrice)
 })
+
 
 //Post
 let forma = document.getElementById('forma');
@@ -101,6 +114,31 @@ const deleteFood = (id) => {
         method: "DELETE",
     })
     .then((res) => {
+        console.log(res);
+    })
+}
+
+//Put
+const updateFood = () =>{
+
+    const foodId = document.getElementById('foodID').value;
+    const foodName = document.getElementById('recipient-name').value;
+    const foodImg = document.getElementById('foodImg').value;
+    const foodPrice = document.getElementById('price-text').value;
+
+    fetch('https://ptf-web-dizajn-2022.azurewebsites.net/api/Food',{
+        method:"PUT",
+        headers: new Headers({
+            "Content-Type": "application/json",
+        }),
+        body: JSON.stringify({
+            "id": foodId,
+            "name": foodName,
+            "imageUrl": foodImg,
+            "price": foodPrice
+        })
+    })
+    .then(res => {
         console.log(res);
     })
 }
