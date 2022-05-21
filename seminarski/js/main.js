@@ -27,9 +27,18 @@ const processData = data => {
         const p = document.createElement('p');
         p.innerHTML = element.price + " KM";
 
+        const button = document.createElement('button');
+        button.setAttribute("type", "button");
+        button.classList.add('btn', 'btn-primary');
+        button.setAttribute("data-toggle", "modal");
+        button.setAttribute("data-target", "#exampleModal");
+        button.setAttribute("data-whatever", element.name);
+        button.innerHTML = "Edit";
+
         div.appendChild(img);
         div.appendChild(h3);
         div.appendChild(p);
+        div.appendChild(button);
         row.appendChild(div);
         mainDiv.appendChild(row);
         section.appendChild(mainDiv);
@@ -43,6 +52,16 @@ const processData = data => {
         dropdown.appendChild(option);
     });
 }
+
+$('#exampleModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var recipient = button.data('whatever') // Extract info from data-* attributes
+  // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+  // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+  var modal = $(this)
+  modal.find('.modal-title').text('New message to ' + recipient)
+  modal.find('.modal-body input').val(recipient)
+})
 
 //Post
 let forma = document.getElementById('forma');
@@ -69,14 +88,12 @@ forma.addEventListener('submit', function(e){
 
 
 //Funkcija koja uzima id hrane iz dropdown menija
-
 function getOption() {
     selectElement = document.querySelector('#dropdown');
     id = selectElement.value;
     document.querySelector('.output').textContent = "Option " + id + " has been successfully deleted!";
     deleteFood(id);
 }
-
 
 //Delete
 const deleteFood = (id) => {
