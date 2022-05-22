@@ -53,8 +53,9 @@ p {
 }
 
 .form-heading{
-  color: white;
+  color: #ef8172;
   margin-bottom: 2%;
+  font-size: 3.5rem;
 }
 
 .white-section {
@@ -118,6 +119,7 @@ p {
 .feature-images{
   margin-bottom: 1rem;
   width: 90%;
+  height: 70%;
   border-radius: 10%;
   border-style: solid;
   border-width: 5px;
@@ -245,4 +247,25 @@ p {
 
 .col-form-label{
   margin-left: 1%;
+}
+
+.zadnji{
+  margin-bottom: 2%;
+}
+
+#submit-food{
+  background-color: white;
+  margin: auto;
+  width: 60%;
+  padding: 2%;
+}
+
+.submit-section{
+  background-color: #ef8172;
+  padding: 5% 0;
+}
+
+.btn-mybg{
+  background-color:#ef8172;
+  color: white;
 }
