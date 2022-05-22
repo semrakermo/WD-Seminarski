@@ -41,16 +41,13 @@
 
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#footer">Contact</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="#offers">Offers</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#pricing">Pricing</a>
+              <a class="nav-link" href="#submit-food">Submit food</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#cta">Download</a>
+              <a class="nav-link" href="#delete-food">Delete food</a>
             </li>
           </ul>
 
@@ -92,7 +89,7 @@
 <!--Forma-->
 
   <section>
-    <div class="first-form">
+    <div class="first-form" id="submit-food">
       <h2 class="form-heading">Do you want to submit more food?</h2>
       <form action="https://ptf-web-dizajn-2022.azurewebsites.net/api/Food" id="forma"> 
         <input type="text" placeholder="Name" id="name" class="col-6 forma"> <br>
@@ -105,7 +102,7 @@
 
   <!--Delete-->
   <section>
-    <div class="delete-div row">
+    <div class="delete-div row" id="delete-food">
       <div class="col-lg-9"><h2 class="delete-text">Do you want to delete some food?</h2></div>
       <div class="dropdown show col-lg-1">
         <select class="btn-light btn-lg" id="dropdown">
@@ -117,18 +114,6 @@
     <span class="output"></span>
 </p>
   </section>
-  <!-- Call to Action -->
-
-  <section class="colored-section" id="cta">
-
-    <div class="container-fluid">
-
-      <h3 class="big-heading">Find the True Love of Your Dog's Life Today.</h3>
-      <button class="download-button btn btn-lg btn-dark" type="button"><i class="fab fa-apple"></i> Download</button>
-      <button class="download-button btn btn-lg brn-light" type="button"><i class="fab fa-google-play"></i> Download</button>
-    </div>
-  </section>
-
 
   <!-- Footer -->
 
@@ -146,10 +131,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
         </div>
         <div class="modal-body">
           <form>
@@ -172,8 +154,8 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" onclick="updateFood()">Send message</button>
+          <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" onclick="updateFood()">Update</button>
         </div>
       </div>
     </div>
