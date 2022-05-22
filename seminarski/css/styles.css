@@ -83,11 +83,6 @@ p {
   font-family: "Montserrat-Light";
 }
 
-/* Buttons */
-
-.download-button {
-  margin: 5% 3% 5% 0;
-}
 
 /* Title Section */
 
@@ -112,9 +107,6 @@ p {
 
 /* Features Section */
 
-#features {
-  position: relative;
-}
 
 .feature-images{
   margin-bottom: 1rem;
@@ -147,23 +139,6 @@ p {
   position: relative;
 }
 
-/* Testimonial Section */
-
-#testimonials {
-  background-color: #ef8172;
-}
-
-.testimonial-text {
-  font-size: 3rem;
-  line-height: 1.5;
-}
-
-.testimonial-image {
-  width: 10%;
-  border-radius: 100%;
-  margin: 20px;
-}
-
 
 #offers{
   color: #ff4c68;
@@ -179,12 +154,6 @@ p {
 .press-logo {
   width: 15%;
   margin: 20px 20px 50px;
-}
-
-/* Pricing Section */
-
-#pricing {
-  padding: 100px;
 }
 
 .price-text {
@@ -206,16 +175,6 @@ p {
   margin: auto;
 }
 
-
-/* CTA Section */
-
-
-/* Footer Section */
-
-
-.social-icon {
-  margin: 20px 10px;
-}
 
 @media (max-width: 1028px) {
 
