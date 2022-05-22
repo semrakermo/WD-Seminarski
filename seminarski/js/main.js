@@ -31,7 +31,7 @@ const processData = data => {
 
         const button = document.createElement('button');
         button.setAttribute("type", "button");
-        button.classList.add('btn', 'btn-danger');
+        button.classList.add('btn', 'btn-danger', 'btn-lg');
         button.setAttribute("data-toggle", "modal");
         button.setAttribute("data-target", "#exampleModal");
         button.setAttribute("data-id", element.id);

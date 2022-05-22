@@ -101,31 +101,21 @@
   </section>
 
   <!--Delete-->
-  <section>
-    <div class="delete-div row" id="delete-food">
-      <div class="col-lg-9"><h2 class="delete-text">Do you want to delete some food?</h2></div>
-      <div class="dropdown show col-lg-1">
-        <select class="btn-light btn-lg" id="dropdown">
+  <section class="delete-section">
+    <div class="delete-div" id="delete-food">
+      <h2 class="delete-text">Do you want to delete some food?</h2>
+      <div class="dropdown show">
+        <select class="btn btn-light btn-lg" id="dropdown">
         </select>
       </div>
     </div>
-  <button onclick="getOption()"> Delete </button>
+  <button class="btn btn-dark btn-lg" onclick="getOption()" id="delete-button"> Delete </button>
   <p>
     <span class="output"></span>
 </p>
   </section>
 
-  <!-- Footer -->
-
-  <footer class="white-section" id="footer">
-    <div class="container-fluid">
-      <i class="social-icon fab fa-facebook-f"></i>
-      <i class="social-icon fab fa-twitter"></i>
-      <i class="social-icon fab fa-instagram"></i>
-      <i class="social-icon fas fa-envelope"></i>
-      <p>© Copyright 2018 TinDog</p>
-    </div>
-  </footer>
+  <!-- Modal -->
   
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">

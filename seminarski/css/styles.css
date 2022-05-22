@@ -21,7 +21,7 @@ p {
 
 .delete-div{
   color:#ff4c68;
-  padding: 5% 0;
+  padding: 5% 0 1% 0;
 }
 
 .section-heading {
@@ -198,6 +198,8 @@ p {
 
 .delete-text{
   font-size: 3.5rem;
+  padding-bottom: 2%;
+  color: white;
 }
 
 #dropdownMenuLink{
@@ -268,4 +270,22 @@ p {
 .btn-mybg{
   background-color:#ef8172;
   color: white;
+}
+
+.delete-section{
+  background-color: #ff4c68;
+  padding-bottom: 2%;
+}
+.btn-light{
+  color: #ff4c68;
+  font-weight: bold;
+}
+
+.output{
+  color: white;
+  font-size: 1rem;
+}
+
+#delete-button{
+  margin-bottom: 2%;
 }
